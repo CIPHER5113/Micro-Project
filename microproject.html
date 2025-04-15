@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: #ffcc00;
+            transition: 0.3s ease;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffcc00;
+            color: #333;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Industrial Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Industrial Solutions</h1>
+        <p>We provide innovative solutions for industrial needs.</p>
+        <button>Learn More</button>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>We are a team of experts with years of experience in industrial solutions.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <ul>
+            <li>Industrial Design</li>
+            <li>Manufacturing</li>
+            <li>Quality Control</li>
+            <li>Maintenance and Repair</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2023 Industrial Solutions
+    </footer>
+
+    <script>
+        // Add event listener to the button
+        document.querySelector('button').addEventListener('click', function() {
+            // Add animation to the button
+            this.classList.add('animate');
+
+            // Remove animation after 1 second
+            setTimeout(function() {
+                document.querySelector('button').classList.remove('animate');
+            }, 1000);
+        });
+
+        // Add event listener to the form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the input values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Validate the input values
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields.');
+            } else {
+                // Submit the form data
+                console.log('Form submitted:', name, email, message);
+            }
+        });
+    </script>
+</body>
+</html>
